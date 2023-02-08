@@ -1,6 +1,9 @@
 package org.example.inheritance;
 
-public class Vertebrate extends Animal {
+public abstract class Vertebrate implements Animal {
 
-
+    @Override
+    public String toString() {
+        return getClass().getSimpleName() + "I|'m a Vertebrate. ";
+    }
 }
