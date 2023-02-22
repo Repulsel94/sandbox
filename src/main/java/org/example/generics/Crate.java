@@ -3,6 +3,7 @@ package org.example.generics;
 import java.util.ArrayList;
 import java.util.List;
 
+//question mark for placeholder
 public class Crate<T extends Box<?>> {
 
     protected List<T> containers;

@@ -5,12 +5,12 @@ import java.util.Random;
 import java.util.stream.Collectors;
 
 public class GenericUsage {
+
     public static void main(String[] args) {
 
         Box<Integer> box1 = new Box<>(1);
         Box<Integer> box2 = new Box<>(163);
-        //for Double, can add d after value instead of xxx.0
-        Box<Double> box3 = new Box<>(163d);
+        Box<Double> box3 = new Box<>(163.0);
 
         System.out.println(box1);
         System.out.println(box2);
@@ -31,9 +31,10 @@ public class GenericUsage {
                 .boxed()
                 .collect(Collectors.toList());
 
-        // TODO show how to crate these up
-        for(Integer i : numbers) {
-            new Box(i);
-        }
+        System.out.println(numbers);
+
+        numbers.forEach(number -> crate2.addBox(new Box<>(number)));
+
+        System.out.println(crate2);
     }
 }
